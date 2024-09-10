@@ -28,6 +28,12 @@ public class StudentController {
 		List<Student> l1=service.getStudentNameStartWithService(ch);
 		return l1;
 	}
+	public List<Student> getStudentByCityNameControl(String ch)
+	{
+		service=new StudentService();
+		List<Student> l1=service.getStudentsByCityNameService(ch);
+		return l1;
+	}
 	
 	public List<Student> sortStudentsByRollControl()
 	{
@@ -35,6 +41,13 @@ public class StudentController {
 		List<Student> l1=service.sortStudentsByRollService();
 		return l1;
 	}
+	public List<Student> sortStudentsByRollInDecsControl()
+	{
+		service=new StudentService();
+		List<Student> l1=service.sortStudentsByRollInDecsService();
+		return l1;
+	}
+	
 	public List<Student> showMinMarksControl()
 	{
 		service=new StudentService();

@@ -14,8 +14,9 @@ public class TestStudent {
 		List<Student> l1 = new ArrayList<Student>();
 //		l1 = sc.getAllStudentControl();
 //		l1=sc.getStudentNameStartWithControl("D");
-//		l1=sc.sortStudentsByRollControl();
-		l1=sc.showMaxMarksControl();
+//		l1=sc.sortStudentsByRollInDecsControl();
+//		l1=sc.showMaxMarksControl();
+		l1=sc.getStudentByCityNameControl("Pune");
 		System.out.println(l1);
 	}
 
