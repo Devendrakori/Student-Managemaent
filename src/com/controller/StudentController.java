@@ -35,5 +35,17 @@ public class StudentController {
 		List<Student> l1=service.sortStudentsByRollService();
 		return l1;
 	}
+	public List<Student> showMinMarksControl()
+	{
+		service=new StudentService();
+		List<Student> l1=service.showMinMarksService();
+		return l1;
+	}
+	public List<Student> showMaxMarksControl()
+	{
+		service=new StudentService();
+		List<Student> l1=service.showMaxMarksService();
+		return l1;
+	}
 
 }

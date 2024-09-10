@@ -72,8 +72,61 @@ public class StudentService {
 		l2=l1;
 		Collections.sort(l2);
 		return l2;
+	}
+	public List<Student> showMinMarksService()
+	{
+		sd = new StudentDao();
+		int n=0;
+		try {
+		System.out.print("How many student's detail do you want to store : ");
+		n = obj.nextInt();
+		}catch(InputMismatchException e)
+		{
+			System.out.println("Enter valid data...");
+		}
 		
+		List<Student> l1=sd.getAllStudent(n);
+		List<Student> l2=new ArrayList<Student>();
+		Student s=l1.get(0);
+		int min=l1.get(0).getMarks();
+		for(int i=1;i<l1.size();i++)
+		{
+			if(l1.get(i).getMarks()<min)
+			{
+				min=l1.get(i).getMarks();
+				s=l1.get(i);
+			}
+		}
+		l2.add(s);
+		return l2;
+	}
+	
+	public List<Student> showMaxMarksService()
+	{
+		sd = new StudentDao();
+		int n=0;
+		try {
+		System.out.print("How many student's detail do you want to store : ");
+		n = obj.nextInt();
+		}catch(InputMismatchException e)
+		{
+			System.out.println("Enter valid data...");
+		}
 		
+		List<Student> l1=sd.getAllStudent(n);
+		List<Student> l2=new ArrayList<Student>();
+		Student s=l1.get(0);
+		int max=l1.get(0).getMarks();
+		for(int i=1;i<l1.size();i++)
+		{
+			if(l1.get(i).getMarks()>max)
+			{
+				max=l1.get(i).getMarks();
+				s=l1.get(i);
+			}
+		}
+		l2.add(s);
+		return l2;
 	}
 
 }
